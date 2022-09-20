@@ -12,7 +12,7 @@ class jj{
 public static void main(String[] args){
 adder s=new adder();
 System.out.println(s.add(10,20));
-System.out.println(a.add(10.20,20.00));
+System.out.println(s.add(10.20,20.00));
 }
 }
         
