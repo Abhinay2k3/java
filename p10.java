@@ -1,5 +1,5 @@
-package p;
-	 class parentClass
+package p1;
+	 public class p10
 	{
 		public void display()
 		{
