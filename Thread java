@@ -1,0 +1,34 @@
+class oopsexp extends Exception
+{
+oopsexp(String str)
+{
+super(str);
+}
+}
+public class exp12
+
+{
+public static void validate(int age)
+{
+if(age<18)
+{
+try
+{
+throw new oopsexp("person is not elegible");
+}
+catch(oopsexp e)
+{
+System.out.println(e.getMessage());
+}
+}
+else
+{
+System.out.println("person is eligible");
+}
+}
+
+public static void main(String args[])
+{
+validate(20);
+}
+}
