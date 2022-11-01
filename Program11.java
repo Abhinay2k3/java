@@ -1,5 +1,12 @@
 import java.util.Scanner;
 import java.util.Random;
+class customer1 extends Exception
+{
+customer1(String str)
+{
+super(str);
+}
+}
 class customer
 {
 Random rand = new Random();
@@ -8,16 +15,24 @@ void account_no()
 {
 account=rand.nextInt();
 }
-void withdraw (int price) throws ArithmeticException
+void withdraw (int price)
 {
+
 if(price>balance)
 {
-throw new ArithmeticException("Insufficent Funds");
+try
+{
+throw new customer1("Insufficent Funds");}
+catch(customer1 e)
+{
+e.printStackTrace();
+}
 }
 else{
 balance=balance-price;
 System.out.println("You have withdraw Rs "+price);
 }
+
 }
 void deposit(int k)
 {
@@ -29,7 +44,7 @@ void print()
 System.out.println("Your Current ammount is "+balance);
 }
 }
-class exceptn1
+class exp11
 {
 public static void main(String args[])
 {
